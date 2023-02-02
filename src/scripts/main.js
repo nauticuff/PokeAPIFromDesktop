@@ -27,7 +27,7 @@ async function FetchPokemon(searchValue) {
     pokeData = await res.json();
 
     //parse the data for what is needed
-    pokeData = parsePokeData(pokeData)
+    //pokeData = parsePokeData(pokeData)
     pokeData = parseAbilities(pokeData)
     
 
@@ -57,14 +57,9 @@ function parsePokeData({moves, name, weight}){
 }
 
 function parseAbilities({abilities}){
-    
-    for(let i = 0; i < abilities.length; i++){
-        const {
-        ability: abilityName
-        } = abilities[i]
-    }
-    return {
-        ability
-    }
-     
+    return abilities.map((index) => {
+        return {
+            abilityName: index.ability.name,
+        }
+    }) 
 }
