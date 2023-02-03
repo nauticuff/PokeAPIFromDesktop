@@ -1,16 +1,36 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
 </head>
-<body>
-  <h1 class="text-3xl text-blue-500 font-bold">
-    Hello world!
-  </h1>
-  <input id="searchValue" class="border-2 border-black m-2 px-3 py-1 text-center" type="text" placeholder="enter pokemon">
-  <p data-search-btn class="border-4 border-black w-fit hover:cursor-pointer m-6 bg-blue-500 text-white px-4 py-2">Search</p>
+
+<body class="p-8">
+  <header>
+    <div class="nav flex justify-between items-center">
+      <img class="cursor-pointer" src="./images/Logo.png" alt="">
+      <div class="search-bar flex items-center justify-between w-96 h-full text-white rounded-3xl bg-sky-700">
+        <input class="text-white outline-none text-center border-none mr-0 w-full m-2 bg-sky-700 placeholder-white placeholder:border-none focus:placeholder:text-transparent" type="text" placeholder="enter pokemon">
+        <svg class="m-2 mr-4 cursor-pointer" width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M8.99215 1.873C6.70815 1.873 4.85015 3.739 4.85015 6.033C4.85015 8.327 6.70815 10.193 8.99215 10.193C11.2762 10.193 13.1342 8.327 13.1342 6.033C13.1342 3.739 11.2762 1.873 8.99215 1.873ZM4.52515 10.053C3.57115 8.985 2.98415 7.578 2.98415 6.033C2.98415 2.706 5.67915 0 8.99115 0C12.3032 0 14.9982 2.707 14.9982 6.033C14.9982 9.36 12.3032 12.066 8.99115 12.066C7.88815 12.066 6.85815 11.761 5.96915 11.238L1.64215 16.337C1.45715 16.554 1.19515 16.666 0.932151 16.666C0.717151 16.666 0.502151 16.593 0.327151 16.442C-0.0648491 16.106 -0.110849 15.515 0.223151 15.122L4.52515 10.053Z"
+            fill="#F2F2F2" />
+        </svg>
+      </div>
+    </div>
+    <div class="flex justify-end">
+      <div id="rndBtn" class="bg-sky-700 text-white rounded-md px-2 py-1 cursor-pointer">RANDOM</div>
+    </div>
+    
+  </header>
+  <main></main>
+  <input id="searchValue" class="border-2 border-black m-2 px-3 py-1 text-center mt-8" type="text"
+    placeholder="enter pokemon">
+  <p data-search-btn class="border-4 border-black w-fit hover:cursor-pointer m-6 bg-blue-500 text-white px-4 py-2">
+    Search</p>
   <script src="./scripts/main.js"></script>
 </body>
+
 </html>
