@@ -5,31 +5,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap" rel="stylesheet">
 </head>
 
-<body class="p-8">
+<body class="p-8 bg-amber-400">
+  <div class="wrapper max-w-[1200px] mx-auto">
   <header>
     <div class="nav flex justify-between items-center">
       <img class="cursor-pointer" src="./images/Logo.png" alt="">
-      <div class="search-bar flex items-center justify-between w-96 h-full text-white rounded-3xl bg-sky-700">
-        <input class="text-white outline-none text-center border-none mr-0 w-full m-2 bg-sky-700 placeholder-white placeholder:border-none focus:placeholder:text-transparent" type="text" placeholder="enter pokemon">
-        <svg class="m-2 mr-4 cursor-pointer" width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="search-bar flex items-center justify-between w-4/12 h-full text-white rounded-3xl bg-sky-700">
+        <input id="searchBox" spellcheck="false"
+          class="text-white outline-none text-center border-none m-1 mr-0 w-full  bg-sky-700 placeholder:text-zinc-300 placeholder:border-none focus:placeholder:text-transparent"
+          type="text" placeholder="search">
+        <svg class="m-2 mr-4 cursor-pointer" width="15" height="17" viewBox="0 0 15 17" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
           <path
             d="M8.99215 1.873C6.70815 1.873 4.85015 3.739 4.85015 6.033C4.85015 8.327 6.70815 10.193 8.99215 10.193C11.2762 10.193 13.1342 8.327 13.1342 6.033C13.1342 3.739 11.2762 1.873 8.99215 1.873ZM4.52515 10.053C3.57115 8.985 2.98415 7.578 2.98415 6.033C2.98415 2.706 5.67915 0 8.99115 0C12.3032 0 14.9982 2.707 14.9982 6.033C14.9982 9.36 12.3032 12.066 8.99115 12.066C7.88815 12.066 6.85815 11.761 5.96915 11.238L1.64215 16.337C1.45715 16.554 1.19515 16.666 0.932151 16.666C0.717151 16.666 0.502151 16.593 0.327151 16.442C-0.0648491 16.106 -0.110849 15.515 0.223151 15.122L4.52515 10.053Z"
             fill="#F2F2F2" />
         </svg>
       </div>
     </div>
-    <div class="flex justify-end">
-      <div id="rndBtn" class="bg-sky-700 text-white rounded-md px-2 py-1 cursor-pointer">RANDOM</div>
+    <div class="flex justify-end sm-">
+      <div id="rndBtn" class="bg-sky-700 mb-20 text-white rounded-md px-2 py-1 cursor-pointer">RANDOM</div>
     </div>
-    
   </header>
-  <main></main>
-  <input id="searchValue" class="border-2 border-black m-2 px-3 py-1 text-center mt-8" type="text"
-    placeholder="enter pokemon">
-  <p data-search-btn class="border-4 border-black w-fit hover:cursor-pointer m-6 bg-blue-500 text-white px-4 py-2">
-    Search</p>
+  <main>
+    <div class="flex flex-col gap-4 md:flex-row justify-between text-white">
+      <div class="bg-[#6A78AB] md:w-6/12 flex flex-col gap-4 rounded-md p-4">
+        <h2 class="text-center text-[2rem] font-bold">Pikachu</h1>
+        <div class="bg-[#93A4E0] rounded-md">
+          <div>
+            <div class=" ">
+              <p>Favorite</p>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.25383 11.0017L10.1613 12.9209C10.5363 13.1668 10.9978 12.801 10.8882 12.3511L10.0459 8.90854C10.0232 8.81312 10.0268 8.71294 10.0564 8.61957C10.086 8.52619 10.1403 8.44341 10.2132 8.38076L12.8207 6.11968C13.1611 5.8258 12.988 5.23204 12.5438 5.20205L9.14022 4.97414C9.04736 4.96853 8.95807 4.93491 8.88329 4.87739C8.8085 4.81987 8.75145 4.74096 8.7191 4.65028L7.44997 1.32763C7.41637 1.23161 7.35517 1.14867 7.27467 1.09005C7.19417 1.03144 7.09828 1 7 1C6.90172 1 6.80583 1.03144 6.72533 1.09005C6.64483 1.14867 6.58363 1.23161 6.55003 1.32763L5.2809 4.65028C5.24855 4.74096 5.1915 4.81987 5.11671 4.87739C5.04193 4.93491 4.95264 4.96853 4.85978 4.97414L1.45618 5.20205C1.01199 5.23204 0.838922 5.8258 1.17928 6.11968L3.78678 8.38076C3.85966 8.44341 3.91403 8.52619 3.94363 8.61957C3.97323 8.71294 3.97685 8.81312 3.95407 8.90854L3.17529 12.0992C3.0426 12.639 3.59641 13.0768 4.04061 12.783L6.74617 11.0017C6.82204 10.9515 6.91009 10.9249 7 10.9249C7.08991 10.9249 7.17796 10.9515 7.25383 11.0017Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+            </div>
+            <div></div>
+          </div>
+          <div>
+
+          </div>
+        </div>
+
+        <div class="bg-[#93A4E0]">
+          <div>
+            Ability
+          </div>
+        </div>
+        <div class="bg-[#93A4E0] p-2">
+          <h2 class="text-center text-black">Ability</h2>
+          <div class="bg-[white] p-6">
+            <p class="text-black text-center">Lightning rod</p> 
+          </div>
+        </div>
+        <div class="bg-[#93A4E0] p-2">
+          <h2 class="text-center text-black">Type</h2>
+          <div class="bg-white">
+            <p class="bg-yellow-400 w-fit mx-auto rounded-md">Electric</p>
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <div class="bg-[#6A78AB] md:w-6/12 rounded-md p-4">
+        
+      </div>
+
+    </div>
+  </main>
+</div>
   <script src="./scripts/main.js"></script>
 </body>
 

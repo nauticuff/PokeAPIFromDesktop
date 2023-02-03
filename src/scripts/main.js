@@ -1,5 +1,6 @@
 
 let searchValue;
+let searchBoxValue;
 let pokeData;
 let pokeData1;
 let pokeData2;
@@ -8,16 +9,20 @@ let location3;
 
 let searchBtn = document.querySelector('[data-search-btn]')
 let randomBtn = document.getElementById('rndBtn')
-
-searchBtn.addEventListener('click', () => {
-    searchValue = document.getElementById('searchValue').value
-    FetchPokemon(searchValue)
-})
+let searchBox = document.getElementById('searchBox')
 
 randomBtn.addEventListener('click', () => {
     let rndNum = Math.floor(Math.random() * 649) + 1
     FetchPokemon(rndNum);
 }) 
+
+searchBox.addEventListener("keypress", function(event){
+    if(event.key == "Enter") {
+        searchBoxValue = document.getElementById('searchBox').value
+        FetchPokemon(searchBoxValue);
+    }
+  });
+
 
 
 //OLD WAY
